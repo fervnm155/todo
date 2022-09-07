@@ -8,15 +8,6 @@ import { crearTodoHtml } from './js/componentes';
 
 export const todoList = new TodoList();
 
-// const tarea = new Todo('aprender js');
-
-// todoList.nuevoTodo(tarea);
-
-// crearTodoHtml(tarea);
-
-localStorage.setItem('mi-key','abc');
-sessionStorage.setItem('mi-key','abc');
-
-// setTimeout(() => {
-//     localStorage.removeItem('mi-key');
-// }, 1500);
+todoList.todos.forEach(todo => crearTodoHtml(todo));
+// es lo mismo
+// todoList.todos.forEach(crearTodoHtml);
